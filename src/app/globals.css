@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  /* The Editorial Concierge Color Palette - Source of Truth from HTML/CSS */
+  --color-primary: #ba0036;
+  --color-primary-container: #e21e4a;
+  --color-on-primary: #ffffff;
+  
+  --color-surface: #f9f9f9;
+  --color-surface-dim: #dadada;
+  --color-surface-bright: #f9f9f9;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f3f3f3;
+  --color-surface-container: #eeeeee;
+  --color-surface-container-high: #e8e8e8;
+  --color-surface-container-highest: #e2e2e2;
+
+  --color-on-surface: #1a1c1c;
+  --color-on-surface-variant: #5c3f41;
+  
+  --color-secondary: #5f5e5e;
+  --color-secondary-container: #e2dfde;
+  --color-on-secondary-container: #636262;
+  
+  --color-outline: #906f70;
+  --color-outline-variant: #e5bdbe;
+
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  
+  /* Brand specific colors from snippets */
+  --color-brand-coral: #FF385C;
+  --color-brand-teal: #88C1B5;
+
+  /* Typography */
+  --font-manrope: var(--font-manrope);
+  --font-league: "League Spartan", sans-serif;
+
+  /* Shadows */
+  --shadow-ambient: 0 8px 24px 0 rgba(26, 28, 28, 0.06);
+
+  /* Border Radii */
+  --radius-default: 1rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+}
+
+:root {
+  --background: var(--color-surface);
+  --foreground: var(--color-on-surface);
+}
+
+@layer base {
+  body {
+    @apply font-manrope bg-surface text-on-surface;
+    min-height: 100dvh;
+  }
+
+  h1, .display-lg {
+    @apply font-league text-[2.5rem] md:text-[3.5rem] font-black uppercase leading-[1.1] tracking-[-0.04em];
+  }
+
+  h2, .headline-lg {
+    @apply text-[2rem] leading-tight font-bold tracking-tight;
+  }
+
+  .label-sm {
+    @apply text-[10px] font-bold uppercase tracking-widest;
+  }
+}
+
+@layer utilities {
+  .hero-gradient {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.7) 100%);
+  }
+  
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply rounded-full bg-primary text-white font-bold py-4 px-8 transition-transform active:scale-95 uppercase;
+  }
+  
+  .btn-secondary {
+    @apply rounded-full bg-brand-teal/80 text-white py-4 px-8 font-bold backdrop-blur-sm active:scale-95 transition-transform uppercase;
+  }
+  
+  .glass {
+    @apply bg-white/80 backdrop-blur-xl;
+  }
+}
