@@ -113,6 +113,32 @@ export default function AboutPage() {
             ))}
           </div>
         </section>
+
+        {/* Contact Info */}
+        <section id="contact" className="px-5 py-16 md:py-24 max-w-7xl mx-auto md:mx-auto">
+          <h2 className="font-league font-black text-3xl md:text-5xl uppercase tracking-tight mb-8">Booking & Contact Information</h2>
+          <div className="bg-surface-container-low rounded-[2rem] p-8 md:p-12 space-y-8">
+            <div className="flex items-center gap-6">
+              <div className="w-14 h-14 rounded-full bg-brand-coral/10 flex items-center justify-center text-brand-coral shrink-0">
+                <span className="material-symbols-outlined text-[28px]">phone</span>
+              </div>
+              <div>
+                <p className="text-secondary text-sm font-bold uppercase tracking-wider mb-1">Telephone & WhatsApp</p>
+                <a href="tel:+256741048781" className="text-xl md:text-3xl font-black text-on-surface hover:text-brand-coral transition-colors">+256 741 048 781</a>
+              </div>
+            </div>
+            
+            <div className="flex items-center gap-6 pt-6 border-t border-outline/10">
+              <div className="w-14 h-14 rounded-full bg-surface flex items-center justify-center text-secondary shrink-0">
+                <span className="material-symbols-outlined text-[28px]">support_agent</span>
+              </div>
+              <div>
+                <p className="text-secondary text-sm font-bold uppercase tracking-wider mb-1">In case of complaints, call:</p>
+                <a href="tel:+256703225193" className="text-lg md:text-2xl font-black text-on-surface hover:text-brand-coral transition-colors">+256 703 225 193</a>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
       <Footer />
@@ -135,10 +161,10 @@ export default function AboutPage() {
       
       {/* Mobile Footer Action (About Us style) */}
       <footer className="md:hidden fixed bottom-24 left-0 w-full px-5 flex justify-center items-center z-40">
-        <button className="bg-primary text-white px-12 py-4 rounded-full font-bold shadow-lg shadow-primary/20 active:scale-95 transition-transform flex items-center gap-3 uppercase tracking-wider text-sm">
+        <Link href="#contact" className="bg-primary text-white px-12 py-4 rounded-full font-bold shadow-lg shadow-primary/20 active:scale-95 transition-transform flex items-center gap-3 uppercase tracking-wider text-sm">
           <span className="material-symbols-outlined text-[20px]">chat</span>
           Book Now
-        </button>
+        </Link>
       </footer>
     </div>
   );

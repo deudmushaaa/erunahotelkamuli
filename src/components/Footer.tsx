@@ -24,7 +24,7 @@ export default function Footer() {
                 QUICK BOOKING
               </span>
               <a
-                href="https://wa.me/256700000000"
+                href="https://wa.me/256741048781"
                 className="text-sm font-bold text-on-surface hover:text-primary transition-colors"
               >
                 Book via WhatsApp
@@ -36,7 +36,7 @@ export default function Footer() {
         {/* Bottom: Divider and Copyright */}
         <div className="border-t border-surface-container pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-secondary/60 text-[10px] uppercase tracking-widest font-bold">
           <p className="text-center md:text-left">
-            © 2026 Eruna Hotel Kamuli. All rights reserved. Designed by Senra Technologies
+            © 2026 Eruna Hotel Kamuli. All rights reserved.
           </p>
           <div className="flex gap-4">
             <Link href="#" className="hover:text-primary transition-colors">

@@ -60,9 +60,9 @@ export default function Home() {
               ERUNA HOTEL:<br />YOUR HOME IN KAMULI.
             </h1>
             <div className="flex flex-col md:flex-row gap-4 mt-8 items-center justify-center w-full">
-              <button className="w-full md:w-auto bg-brand-coral text-white rounded-full py-4 px-12 font-bold text-lg shadow-lg active:scale-95 transition-transform uppercase tracking-wider">
+              <Link href="#contact" className="w-full md:w-auto bg-brand-coral text-white rounded-full py-4 px-12 font-bold text-lg shadow-lg active:scale-95 transition-transform uppercase tracking-wider text-center block">
                 BOOK NOW
-              </button>
+              </Link>
               <Link 
                 href="/gallery" 
                 className="w-full md:w-auto bg-brand-teal/80 text-white rounded-full py-4 px-12 font-bold text-lg backdrop-blur-sm active:scale-95 transition-transform uppercase tracking-wider"
@@ -143,12 +143,15 @@ export default function Home() {
           {/* Location */}
           <section className="mt-20 md:mt-32 space-y-8 mb-24">
             <h2 className="font-league font-black text-2xl md:text-5xl uppercase tracking-tight">Location</h2>
-            <div className="h-[200px] md:h-[600px] rounded-lg overflow-hidden bg-surface-container-low flex items-center justify-center relative">
-              <img src="/images/exterior image two.jpeg" alt="Kamuli Surroundings Map Backdrop" className="w-full h-full object-cover opacity-50 grayscale" />
-              <div className="absolute flex flex-col items-center">
-                <span className="material-symbols-outlined text-on-surface text-5xl">map</span>
-                <p className="font-bold text-on-surface mt-2 uppercase tracking-widest text-xs">Kamuli, Uganda</p>
-              </div>
+            <div className="h-[300px] md:h-[600px] w-full rounded-lg overflow-hidden bg-surface-container-low">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.2758963041883!2d33.12413671008356!3d0.944790362740903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177ea9414fa4b827%3A0xa7078a12617ddef7!2sERUNA%20HOTEL%2CACCOMODATION%20AND%20RESTAURANT!5e0!3m2!1sen!2sug!4v1788856300427!5m2!1sen!2sug" 
+                className="w-full h-full" 
+                style={{ border: 0 }} 
+                allowFullScreen 
+                loading="lazy" 
+                referrerPolicy="strict-origin-when-cross-origin"
+              />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-8">
               {[
@@ -166,6 +169,32 @@ export default function Home() {
               ))}
             </div>
           </section>
+
+          {/* Contact Info */}
+          <section id="contact" className="mt-20 md:mt-32 space-y-8 mb-24">
+            <h2 className="font-league font-black text-2xl md:text-5xl uppercase tracking-tight">Booking & Contact Information</h2>
+            <div className="bg-surface-container-low rounded-[2rem] p-8 md:p-12 space-y-8">
+              <div className="flex items-center gap-6">
+                <div className="w-14 h-14 rounded-full bg-brand-coral/10 flex items-center justify-center text-brand-coral shrink-0">
+                  <span className="material-symbols-outlined text-[28px]">phone</span>
+                </div>
+                <div>
+                  <p className="text-secondary text-sm font-bold uppercase tracking-wider mb-1">Telephone & WhatsApp</p>
+                  <a href="tel:+256741048781" className="text-xl md:text-3xl font-black text-on-surface hover:text-brand-coral transition-colors">+256 741 048 781</a>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-6 pt-6 border-t border-outline/10">
+                <div className="w-14 h-14 rounded-full bg-surface flex items-center justify-center text-secondary shrink-0">
+                  <span className="material-symbols-outlined text-[28px]">support_agent</span>
+                </div>
+                <div>
+                  <p className="text-secondary text-sm font-bold uppercase tracking-wider mb-1">In case of complaints, call:</p>
+                  <a href="tel:+256703225193" className="text-lg md:text-2xl font-black text-on-surface hover:text-brand-coral transition-colors">+256 703 225 193</a>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </main>
 
@@ -173,10 +202,10 @@ export default function Home() {
 
       {/* Book Now Button (Mobile Hero Style Overlay) */}
       <footer className="md:hidden fixed bottom-24 left-0 w-full px-5 flex justify-center items-center z-40">
-        <button className="bg-primary text-white px-12 py-4 rounded-full font-bold shadow-lg shadow-primary/20 active:scale-95 transition-transform flex items-center gap-3 uppercase tracking-wider text-sm">
+        <Link href="#contact" className="bg-primary text-white px-12 py-4 rounded-full font-bold shadow-lg shadow-primary/20 active:scale-95 transition-transform flex items-center gap-3 uppercase tracking-wider text-sm">
           <span className="material-symbols-outlined text-[20px]">chat</span>
           Book Now
-        </button>
+        </Link>
       </footer>
 
       {/* Bottom Nav */}

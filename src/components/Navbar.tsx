@@ -52,7 +52,7 @@ export default function Navbar() {
           {/* Action Button & Mobile Menu Toggle */}
           <div className="flex items-center gap-4">
             <Link
-              href="#"
+              href="/#contact"
               className="hidden md:block btn-primary text-sm tracking-wide px-6 py-3"
             >
               Book Now
@@ -104,7 +104,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="#"
+              href="/#contact"
               onClick={() => setIsOpen(false)}
               className="text-stone-600 py-4 px-6 flex items-center gap-4 font-semibold text-lg hover:bg-surface-container-low rounded-xl transition-colors"
             >
